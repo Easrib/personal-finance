@@ -20,6 +20,13 @@ const calculate = document.getElementById('calculate-btn').addEventListener('cli
     balanceCalc.innerText = getIncome() - getExpense();
 });
 
-
+const savings = document.getElementById('save-btn').addEventListener('click', function () {
+    let savePercantageText = document.getElementById('save-input');
+    let savePercantage = parseFloat(savePercantageText.value);
+    let savingAmount = document.getElementById("saving-amount");
+    savingAmount.innerText = getIncome() * (savePercantage / 100);
+    let remainingBalance = document.getElementById('remaining-amount');
+    remainingBalance.innerText = getIncome() - getExpense() - parseFloat(savingAmount.innerText);
+})
 
 // financial calculation ends
