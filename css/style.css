@@ -4,3 +4,13 @@
     height: 100%;
 }
 /* image style starts  */
+/* financial calculation style starts here  */
+#save-input{
+    max-width: 100px;
+    padding: 5px;
+    margin-right: 10px;
+}
+#save-btn{
+    margin-left: 10px;
+}
+/* financial calculation style starts here  */
