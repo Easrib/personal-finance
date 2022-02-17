@@ -21,7 +21,8 @@ const getExpense = function () {
         inputError.style.display = "none";
         errorMessage.style.display = 'none';
         return totalExpense;
-    } else {
+    }
+    else {
         inputError.style.display = "block";
     }
 
