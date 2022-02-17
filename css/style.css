@@ -5,6 +5,9 @@
 }
 /* image style starts  */
 /* financial calculation style starts here  */
+#error-message{
+    display: none;
+}
 #save-input{
     max-width: 100px;
     padding: 5px;
@@ -12,5 +15,8 @@
 }
 #save-btn{
     margin-left: 10px;
+}
+#saving-error{
+    display: none;
 }
 /* financial calculation style starts here  */
