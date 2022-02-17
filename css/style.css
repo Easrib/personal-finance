@@ -5,6 +5,9 @@
 }
 /* image style starts  */
 /* financial calculation style starts here  */
+#input-error{
+    display: none;
+}
 #error-message{
     display: none;
 }

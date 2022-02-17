@@ -1,9 +1,15 @@
 // financial calculation starts 
-
+const inputError = document.getElementById('input-error');
 const getIncome = function () {
     const income = document.getElementById("income-input").value;
     const incomeNumber = parseFloat(income);
-    return incomeNumber;
+    if (incomeNumber >= 0) {
+        inputError.style.display = "none";
+        errorMessage.style.display = 'none';
+        return incomeNumber;
+    } else {
+        inputError.style.display = "block";
+    }
 };
 const getExpense = function () {
     const food = document.getElementById("food-input").value;
@@ -11,7 +17,14 @@ const getExpense = function () {
     const cloth = document.getElementById("cloth-input").value;
     const totalExpense = parseFloat(food) + parseFloat(rent) + parseFloat(cloth);
 
-    return totalExpense;
+    if (parseFloat(food) >= 0 && parseFloat(rent) >= 0 && parseFloat(cloth) >= 0) {
+        inputError.style.display = "none";
+        errorMessage.style.display = 'none';
+        return totalExpense;
+    } else {
+        inputError.style.display = "block";
+    }
+
 };
 let errorMessage = document.getElementById('error-message');
 const calculate = document.getElementById('calculate-btn').addEventListener('click', function () {
